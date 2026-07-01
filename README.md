@@ -6,15 +6,11 @@ Sliding Cat Cursor for Chrome Extension is a tiny Chrome/Edge extension that
 shows an original illustrated sliding cat near your cursor when you move the
 mouse downward. Move upward and the cat fades away.
 
-The cat artwork is original and packaged locally with the extension.
-
-## Download
+## Download and Go to Chrome Developer Mode
 
 Download the latest unpacked-extension zip:
 
 [sliding-cat-cursor-v1.1.3.zip](dist/sliding-cat-cursor-v1.1.3.zip)
-
-## Install on Windows or Mac
 
 1. Download `sliding-cat-cursor-v1.1.3.zip`.
 2. Unzip it.
