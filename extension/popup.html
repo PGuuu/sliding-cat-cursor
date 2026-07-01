@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sliding Cat Cursor</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="assets/sliding-cat.png" alt="">
+        <div>
+          <h1>Sliding Cat</h1>
+          <p>Downward cursor drama.</p>
+        </div>
+      </header>
+
+      <label class="row switch-row">
+        <span>Enabled</span>
+        <input id="enabled" type="checkbox">
+      </label>
+
+      <label class="field">
+        <span>Cat height</span>
+        <input id="height" type="range" min="80" max="220" step="5">
+        <output id="heightValue"></output>
+      </label>
+
+      <label class="field">
+        <span>Downward sensitivity</span>
+        <input id="minDownPixels" type="range" min="1" max="16" step="1">
+        <output id="sensitivityValue"></output>
+      </label>
+
+      <button id="openDemo" type="button">Open demo page</button>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
