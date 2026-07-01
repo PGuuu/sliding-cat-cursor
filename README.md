@@ -3,16 +3,19 @@
 ![Sliding Cat Cursor demo](docs/assets/screenshot-demo-1280x800.png)
 
 Sliding Cat Cursor for Chrome Extension is a tiny Chrome/Edge extension that
-shows an original illustrated sliding cat near your cursor when you move the
-mouse downward. Move upward and the cat fades away.
+shows a cutout sliding cat near your cursor when you move the mouse downward.
+Move upward and the cat fades away.
+
+This open-source GitHub build uses the cutout cat image from the original viral
+photo. Please verify image rights before commercial redistribution.
 
 ## Download and Go to Chrome Developer Mode
 
 Download the latest unpacked-extension zip:
 
-[sliding-cat-cursor-v1.1.3.zip](dist/sliding-cat-cursor-v1.1.3.zip)
+[sliding-cat-cursor-v1.1.4.zip](dist/sliding-cat-cursor-v1.1.4.zip)
 
-1. Download `sliding-cat-cursor-v1.1.3.zip`.
+1. Download `sliding-cat-cursor-v1.1.4.zip`.
 2. Unzip it.
 3. Open Chrome or Edge.
 4. Go to `chrome://extensions` or `edge://extensions`.
@@ -32,7 +35,7 @@ Project layout:
 - `extension/manifest.json`: Chrome Manifest V3 config
 - `extension/content.js`: cursor movement detection and cat overlay
 - `extension/popup.html`, `popup.css`, `popup.js`: popup settings UI
-- `extension/assets/sliding-cat.png`: original illustrated cat asset
+- `extension/assets/sliding-cat.png`: cutout cat image asset
 - `extension/icons/`: extension icons
 - `dist/`: packaged zip builds for manual install
 - `docs/assets/`: screenshots and listing assets

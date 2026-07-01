@@ -22,3 +22,6 @@ to pointer movement direction. It does not read, collect, store, or transmit:
 - health information
 
 No analytics, tracking pixels, remote code, or external APIs are used.
+
+This GitHub build packages a local cutout cat image asset. The image is never
+loaded from a remote server.
