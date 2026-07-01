@@ -1,10 +1,10 @@
-# Sliding Cat Cursor
+# Sliding Cat Cursor for Chrome Extension
 
 ![Sliding Cat Cursor demo](docs/assets/screenshot-demo-1280x800.png)
 
-Sliding Cat Cursor is a tiny Chrome extension that shows an original illustrated
-sliding cat near your cursor when you move the mouse downward. Move upward and
-the cat fades away.
+Sliding Cat Cursor for Chrome Extension is a tiny Chrome/Edge extension that
+shows an original illustrated sliding cat near your cursor when you move the
+mouse downward. Move upward and the cat fades away.
 
 The cat artwork is original and packaged locally with the extension.
 
@@ -25,6 +25,56 @@ Download the latest unpacked-extension zip:
 7. Select the unzipped extension folder.
 
 The cat will appear on normal webpages when your cursor moves downward.
+
+## For Extension Developers
+
+This repository is the Chrome extension version of Sliding Cat Cursor. The
+browser extension source is in `extension/`.
+
+Project layout:
+
+- `extension/manifest.json`: Chrome Manifest V3 config
+- `extension/content.js`: cursor movement detection and cat overlay
+- `extension/popup.html`, `popup.css`, `popup.js`: popup settings UI
+- `extension/assets/sliding-cat.png`: original illustrated cat asset
+- `extension/icons/`: extension icons
+- `dist/`: packaged zip builds for manual install
+- `docs/assets/`: screenshots and listing assets
+
+### Run Locally For Development
+
+1. Open Chrome or Edge.
+2. Go to `chrome://extensions` or `edge://extensions`.
+3. Turn on `Developer mode`.
+4. Click `Load unpacked`.
+5. Select the `extension/` folder from this repo.
+6. After code changes, click the extension reload button and refresh the test
+   page or webpage.
+
+### Repackage
+
+Zip the contents of `extension/`, not the folder itself. The zip must contain
+`manifest.json` at the top level.
+
+On macOS/Linux:
+
+```bash
+cd extension
+zip -r ../dist/sliding-cat-cursor.zip .
+```
+
+On Windows PowerShell:
+
+```powershell
+Compress-Archive -Path extension\* -DestinationPath dist\sliding-cat-cursor.zip -Force
+```
+
+### Permission Notes
+
+The extension uses `storage` to save local settings. It uses a content script on
+webpages so the visual cursor effect can appear automatically. The content
+script listens only to pointer movement direction and does not inspect page
+content.
 
 ## Features
 
@@ -49,13 +99,6 @@ It stores only local settings such as:
 The content script listens only to pointer movement direction so it can show or
 hide the local cat image. It does not inspect page text, forms, links, cookies,
 account information, browsing history, or page content.
-
-## Build Package
-
-The Chrome extension source lives in `extension/`.
-
-To make a package manually, zip the contents of `extension/`, not the folder
-itself. The zip should contain `manifest.json` at the top level.
 
 ## License
 
